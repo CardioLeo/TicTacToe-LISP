@@ -1,0 +1,31 @@
+(|SYSTEM|::|VERSION| '(20100806.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 3 (DEFUN TIC-TAC-TOE NIL ...)-1|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|TIC-TAC-TOE| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|TIC-TAC-TOE|
+       #21Y(00 00 00 00 00 00 00 00 26 01 DA 38 01 31 8E 38 01 31 97 19 01)
+       (|COMMON-LISP-USER|::|TIC-TAC-TOE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|5 21 (DEFUN DRAW-BOARD NIL ...)-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|DRAW-BOARD| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|DRAW-BOARD|
+       #23Y(00 00 00 00 00 00 00 00 26 01 2E 00 DB 38 01 31 8E 38 01 31 97 19
+            01)
+       (|COMMON-LISP-USER|::|TIC-TAC-TOE|
+        "\n\n\n
+     |     |     \n
+  0  |  1  |  2  \n
+_____|_____|_____\n
+     |     |     \n
+  3  |  4  |  5  \n
+_____|_____|_____\n
+     |     |     \n
+  6  |  7  |  8  \n
+     |     |     \n\n\n")
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))

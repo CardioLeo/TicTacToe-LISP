@@ -1,0 +1,5 @@
+sbcl --noinform --load test.lisp --eval '(progn (hello-world) (sb-ext:quit))'
+
+
+source:
+https://stackoverflow.com/questions/20301668/running-a-common-lisp-function-from-a-terminal-command-prompt
