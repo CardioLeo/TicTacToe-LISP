@@ -106,10 +106,18 @@
   ;(print *found_a_match*)
   ;(terpri)
 
+(defun read-move ()
+  (setq temp-input (read))
+  ;(format t '"This is your temp input: ")
+  ;(write temp-input)
+  (setf (aref *board_spots* (- temp-input 1)) *mark*)
+  (terpri))
+
 (defun player-move ()
   (format t '"Please select a spot to place your mark:")
   (terpri)
-  (terpri))
+  (read-move)
+  (terpri)(terpri))
 
 (defun announce-tie ()
   (format t '"Looks like no clear winner, this time"))
@@ -121,14 +129,11 @@
   (or (if (< *three-in-a-row* 1) (announce-tie)) (if (= *three-in-a-row* 1) (announce-win))))
 
 (defun announce-game-over ()
-  (terpri)
-  (terpri)
+  (terpri)(terpri)
   (format t '"No more rounds!")
-  (terpri)
-  (terpri)
+  (terpri)(terpri)
   (tie-or-zero-sum)
-  (terpri)
-  (terpri))
+  (terpri)(terpri))
 
 (defun test-to-speak ()
   (if (not *game_in_play*) (announce-game-over)))
@@ -147,13 +152,6 @@
   (change-turn)
   (display-info))
 
-(defun test-read-print ()
-  (setq temp-input (read))
-  (format t '"This is your temp input: ")
-  (write temp-input)
-  (setf (aref *board_spots* (- temp-input 1)) *mark*)
-  (terpri))
-
 (defun start-game ()
   (set-board-values)
   (draw-board)
@@ -164,8 +162,7 @@
 	   (player-move)
 	   ;(test-input-draw-board)
 	   (draw-board)
-	   (late-helper-functions)
-	   (test-read-print)))
+	   (late-helper-functions)))
 
 (defun reset-pregame-variables ()
   (format t '"Resetting values so game can restart")
