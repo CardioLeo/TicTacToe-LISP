@@ -118,8 +118,7 @@
   (format t '"A player has won!"))
 
 (defun tie-or-zero-sum ()
-  (or (if (< *three-in-a-row* 1) (announce-tie)) (if (= *three-in-a-row* 1) (announce-win)))
-  )
+  (or (if (< *three-in-a-row* 1) (announce-tie)) (if (= *three-in-a-row* 1) (announce-win))))
 
 (defun announce-game-over ()
   (terpri)
@@ -148,6 +147,16 @@
   (change-turn)
   (display-info))
 
+(defun test-read-print ()
+  (setq *test-value* (read))
+  (format t '"This is your test value: ")
+  (write *test-value*)
+  (terpri)
+  (setf (aref *board_spots* 0) (read))
+  ;(format t *board_spots* 0)
+  (terpri))
+
+
 (defun start-game ()
   (set-board-values)
   (draw-board)
@@ -158,7 +167,9 @@
 	   (player-move)
 	   ;(test-input-draw-board)
 	   (draw-board)
-	   (late-helper-functions)))
+	   (late-helper-functions)
+	   (test-read-print)))
+
 
 (defun reset-pregame-variables ()
   (format t '"Resetting values so game can restart")
@@ -181,11 +192,6 @@
 (defun speak-question ()
   (format t '"Would you like to play again?"))
 
-(defun test-read-print ()
-  (setq *test-value* (read))
-  (format t '"This is your test value: ")
-  (write *test-value*))
-
 (defun ask-to-play ()
   (speak-question)
   (take-endgame-input)
@@ -197,5 +203,4 @@
   (loop while *game_in_play*
         do (terpri)(terpri)
 	(start-game)
-	(ask-to-play)
-	(test-read-print)))
+	(ask-to-play)))
