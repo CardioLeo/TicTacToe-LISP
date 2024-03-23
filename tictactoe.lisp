@@ -148,14 +148,11 @@
   (display-info))
 
 (defun test-read-print ()
-  (setq *test-value* (read))
-  (format t '"This is your test value: ")
-  (write *test-value*)
-  (terpri)
-  (setf (aref *board_spots* 0) (read))
-  ;(format t *board_spots* 0)
+  (setq temp-input (read))
+  (format t '"This is your temp input: ")
+  (write temp-input)
+  (setf (aref *board_spots* (- temp-input 1)) *mark*)
   (terpri))
-
 
 (defun start-game ()
   (set-board-values)
@@ -169,7 +166,6 @@
 	   (draw-board)
 	   (late-helper-functions)
 	   (test-read-print)))
-
 
 (defun reset-pregame-variables ()
   (format t '"Resetting values so game can restart")
