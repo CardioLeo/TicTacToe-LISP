@@ -181,6 +181,11 @@
 (defun speak-question ()
   (format t '"Would you like to play again?"))
 
+(defun test-read-print ()
+  (setq *test-value* (read))
+  (format t '"This is your test value: ")
+  (write *test-value*))
+
 (defun ask-to-play ()
   (speak-question)
   (take-endgame-input)
@@ -193,5 +198,4 @@
         do (terpri)(terpri)
 	(start-game)
 	(ask-to-play)
-	))
-
+	(test-read-print)))
