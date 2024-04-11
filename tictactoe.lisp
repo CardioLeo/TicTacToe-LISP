@@ -53,8 +53,7 @@
   (terpri)
   (format t '"Current Round is: ")(print *round_counter*)
   (terpri)
-  (format t '"Current Turn goes to: ")
-  (print *mark*)
+  (format t '"Current Turn goes to: ")(print *mark*)
   (terpri)(terpri))
 
 (defun change-turn ()
@@ -67,7 +66,7 @@
 (defun draw-board ()
   (terpri)
   (terpri)
-  (format t '"         !         !       ")
+  (format t '"         !         !         ")
   (terpri)
   (format t '"         !         !         ")
   (terpri)
